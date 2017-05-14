@@ -115,10 +115,10 @@ angular.module('serviceLocatorApp', ['ionic','serviceLocatorApp.controllers'])
     views: {
       'mainContent': {
         templateUrl: 'templates/requests.html',
-        controller: 'UserDetailController',
+        controller: 'BookingRequestController',
         resolve: {
-            dish: ['$stateParams','userFactory', function($stateParams, userFactory){
-                return userFactory.get({id:parseInt($stateParams.id, 10)});
+            bookingReqests: ['$stateParams','BookingRequestFactory', function($stateParams, userFactory){
+                return BookingRequestFactory.get({id:parseInt($stateParams.id, 10)});
             }]
         }
       }

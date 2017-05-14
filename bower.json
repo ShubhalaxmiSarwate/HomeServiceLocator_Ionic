@@ -1,0 +1,26 @@
+{
+  "name": "homeServiceLocator",
+  "description": "homeServiceLocator: An Ionic project",
+  "main": "index.html",
+  "authors": [
+    "Shubhalaxmi"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "services",
+    "requests",
+    "carpentry"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-local-storage": "^0.5.2"
+  }
+}

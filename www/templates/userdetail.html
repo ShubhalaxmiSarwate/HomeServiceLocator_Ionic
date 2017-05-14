@@ -1,0 +1,35 @@
+<ion-view view-title="User Details">
+  <ion-nav-buttons side="secondary">
+        <button class="button button-clear icon ion-more" ng-click="displayPopOver($event)">  
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+    <div class="card">
+          <div class="item item-body item-text-wrap">
+               <img class="full-image" ng-src="{{baseURL+user.image}}" alt="{{user.firstname}}">
+                <h2>{{user.companyName}} 
+                 <span style="font-size:75%">{{user.hourlyRate | currency}}</span>
+                <span class="badge badge-assertive">{{user.custRating}} Stars</span></h2>
+                <p>{{user.description}}</p>
+          </div>
+      </div>
+<!--		the below code is added for future use to display comments-->
+<!--      <div class="row">
+            <div class="col col-offset-10">
+                   <h4>Customer Comments &nbsp;&nbsp;&nbsp;
+                       <small>Sort by: &nbsp;
+                             <input type="text" ng-model="orderText">
+                          </small></h4>
+                    <ul class="list">
+                        <li ng-repeat="comment in user.comments | orderBy:orderText">
+                          <blockquote>
+                             <p>{{comment.rating}} Stars</p>
+                             <p>{{comment.comment}}</p>
+                             <footer>{{comment.author}}, {{comment.date | date:'MMM. dd, yyyy'}}</footer>
+                          </blockquote>
+                        </li>
+                    </ul>
+            </div>
+      </div>-->
+  </ion-content>
+</ion-view>

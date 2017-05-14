@@ -1,0 +1,124 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Register</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeRegister()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doRegister()">
+      <div class="list">
+       <label class="item item-input">
+       <span class="input-label">Your Picture</span>
+       </label>
+       <label class="item item-input">
+       <img class="padding" ng-src="{{registration.image}}">
+       </label>
+       <label class="item item-input">
+       <button class="button button-block button-positive" type="button" ng-click="takePicture()">
+            Take Picture
+        </button>
+        </label>
+        <label class="item item-input">
+            <button class="button button-block button-balanced" type="button" ng-click="getPicture()">
+            Gallery
+        </button>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="registration.firstname">
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="registration.lastname">
+        </label>
+		<label class="item item-input">
+          <span class="input-label">Street Address</span>
+          <input type="text" ng-model="registration.regStreetAddress">
+        </label>
+		 <label class="item item-input">
+          <span class="input-label">City</span>
+          <input type="text" ng-model="registration.regCity">
+        </label>
+		 <label class="item item-input">
+          <span class="input-label">Postal Code</span>
+          <input type="text" ng-model="registration.regPostalCode">
+        </label>
+		<label class="item item-input">
+          <span class="input-label">Country</span>
+          <input type="text" ng-model="registration.regCountry">
+        </label>
+		<label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="registration.regEmailAddress">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="password" ng-model="registration.regPassword">
+        </label>
+       <label class="item item-input">
+          <span class="input-label">Telephone Number</span>
+          <input type="tel" ng-model="registration.regPhoneNumber">
+        </label>
+		  <ion-item>
+		  <ion-label>Register as</ion-label>
+			  <ion-select [(ngModel)]="registration.regUserType">
+				<ion-option value="C">Consumer</ion-option>
+				<ion-option value="SP">Service Provider</ion-option>
+			  </ion-select>
+		  </ion-item>
+		  <div ng-show="{{registration.regUserType}} == 'SP'">
+			  Company Details:
+			    <label class="item item-input">
+				  <span class="input-label">Company Name</span>
+				  <input type="text" ng-model="registration.regCompanyname">
+				</label>
+			    <label class="item item-input">
+				  <span class="input-label">Company Street Address</span>
+				  <input type="text" ng-model="registration.regCompanyStreetAddress">
+				</label>			    
+			  <label class="item item-input">
+				  <span class="input-label">City</span>
+				  <input type="text" ng-model="registration.regCompanyCity">
+				</label>			    
+			  <label class="item item-input">
+				  <span class="input-label">Postal Code</span>
+				  <input type="text" ng-model="registration.regCompanyPostalCode">
+				</label>			    
+			  <label class="item item-input">
+				  <span class="input-label">Country</span>
+				  <input type="text" ng-model="registration.regCompanyCountry">
+				</label>			    
+			  <label class="item item-input">
+				  <span class="input-label">Company Phone number</span>
+				  <input type="text" ng-model="registration.regCompanyPhoneNumber">
+				</label>			    
+			  <label class="item item-input">
+				  <span class="input-label">Company Description</span>
+				  <input type="text" ng-model="registration.description">
+				</label>	
+			  <label class="item item-input">
+				  <span class="input-label">Hourly rate</span>
+				  <input type="number" ng-model="registration.hourlyRate">
+			  </label>
+			  <label class="item item-input">
+				  <span class="input-label"></span>
+				  <input type="text" ng-model="">
+				</label>
+			  <ion-item>
+				  <ion-label>Services Provided</ion-label>
+				  <ion-select [(ngModel)]="registration.description" multiple="true">
+					<ion-option>Plumber</ion-option>
+					<ion-option>Gardener</ion-option>
+					<ion-option>Electrician</ion-option>
+					<ion-option>Other</ion-option>
+				  </ion-select>
+				</ion-item>
+		  </div>
+		  <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

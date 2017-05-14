@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Requests</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+	  <button (click)="itemSelected(item)">
+<!--		   ion-item *ngFor="let item of items" >-->
+			<ion-item>
+				<ion-avatar item-left>
+				  <img src="images/profile.png">
+				</ion-avatar>
+				<h2>Name</h2>
+				<p>Description: <p>    
+		  </ion-item>
+  </button> 
+  
+</ion-list>
+</ion-content>

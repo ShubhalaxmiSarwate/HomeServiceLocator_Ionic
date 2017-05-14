@@ -1,0 +1,18 @@
+<ion-view view-title="Requests">
+  <ion-nav-buttons side="secondary">
+        <button class="button button-clear icon ion-more" ng-click="displayPopOver($event)">  
+        </button>
+    </ion-nav-buttons>
+<ion-content>
+	<ion-list ng-repeat="bookingReqest in bookingReqests | filter:{serviceProvided: filtText, availibilityStatus: true}" href="#/app/requests/{{requests.id}}" class="item-thumbnail-left" >
+		  <button (click)="itemSelected(item)">
+	<!--		   ion-item *ngFor="let item of items" >-->
+				<ion-item>
+					<h2>{{bookingReqest.name}}</h2>
+					<p>{{bookingReqest.desc}}: <p>    
+			  </ion-item>
+	  </button> 
+
+	</ion-list>
+</ion-content>
+</ion-view>
